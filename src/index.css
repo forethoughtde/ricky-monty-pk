@@ -13,6 +13,5 @@ code {
 }
 
 .accordion{
-	width: calc(100% / 3);
-	padding: 16px;
+	width: 100%;
 }
