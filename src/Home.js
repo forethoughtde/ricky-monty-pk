@@ -1,5 +1,8 @@
 import React from 'react';
 import HomeComponent from './components/HomeComponent'
+import { Helmet } from 'react-helmet'
+
+const TITLE = 'Overview'
 
 function Home(){
     const style = {
@@ -9,6 +12,9 @@ function Home(){
     }
     return (
         <div style={style}>
+            <Helmet>
+                <title>{ TITLE }</title>
+            </Helmet>
             <h1>Rick and Morty</h1>
             <img src="https://www.musikexpress.de/wp-content/uploads/2019/10/08/10/rick-morty-4-season-bildschirmfoto-2019-10-08-um-10-29-06.jpg" alt=""/>
             <p>

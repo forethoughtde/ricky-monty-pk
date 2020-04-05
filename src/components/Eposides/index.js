@@ -2,6 +2,9 @@ import React, {useState, useEffect} from 'react'
 import Accordion from 'react-bootstrap/Accordion'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
+import { Helmet } from 'react-helmet'
+
+const TITLE = 'Eposides - Ricky and Monty'
 
 const EposidesComponent = ()=>{
 
@@ -29,6 +32,9 @@ const EposidesComponent = ()=>{
 
     return (
         <div style={stylePadding}>
+            <Helmet>
+                <title>{ TITLE }</title>
+            </Helmet>
             <h1>List of Eposides</h1>
             <div className="flexContainer">
                 <Accordion defaultActiveKey="0">

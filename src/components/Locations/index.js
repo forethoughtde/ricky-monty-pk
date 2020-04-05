@@ -2,6 +2,10 @@ import React, {useEffect, useState} from "react";
 import Accordion from "react-bootstrap/Accordion";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import { Helmet } from 'react-helmet'
+
+const TITLE = 'Locations - Ricky and Monty'
+
 const LocationsComponent = ()=>{
     const [locations, setLocations] = useState([]);
 
@@ -27,6 +31,9 @@ const LocationsComponent = ()=>{
 
     return (
         <div style={stylePadding}>
+            <Helmet>
+                <title>{ TITLE }</title>
+            </Helmet>
             <h1>List of Locations</h1>
             <div className="flexContainer">
                 <Accordion defaultActiveKey="0">

@@ -1,6 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import './style.css';
+import { Helmet } from 'react-helmet'
+
+const TITLE = 'Characters - Ricky and Monty'
 
 const HomeComponent = () => {
 
@@ -18,6 +21,9 @@ const HomeComponent = () => {
 
     return (
         <div className="flexContainer">
+            <Helmet>
+                <title>{ TITLE }</title>
+            </Helmet>
             {
                 characters.map((character) => {
                     return (<div className="character-item" key={character.id}>
