@@ -3,15 +3,16 @@ import ReactDOM from 'react-dom';
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
-    Link
+    Route
 } from "react-router-dom";
 import './index.css';
 import App from './App';
 import Home from './Home';
 import Header from './Header';
 import Characters from './Characters';
+import Eposides from './Eposides';
 import * as serviceWorker from './serviceWorker';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
     <React.StrictMode>
@@ -25,7 +26,7 @@ ReactDOM.render(
                     <Characters/>
                 </Route>
                 <Route path="/episodes">
-                    <App/>
+                    <Eposides/>
                 </Route>
                 <Route path="/">
                     <Home/>

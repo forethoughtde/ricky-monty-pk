@@ -1,4 +1,4 @@
-header{
+header.globalHeader{
 	width: 100%;
 	height: 80px;
 	display: flex;
@@ -13,7 +13,7 @@ header{
 	max-width: 120px;
 }
 
-header a{
+header.globalHeader a{
 	color: #FFFFFF;
 	text-decoration: none;
 }

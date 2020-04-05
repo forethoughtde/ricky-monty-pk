@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { NavLink } from 'react-router-dom'
+import './style.css'
 
 const HomeComponent = () => {
 
@@ -9,7 +10,7 @@ const HomeComponent = () => {
         fetch('https://rickandmortyapi.com/api')
             .then((response) => response.json())
             .then(data => { setCategories(Object.keys(data)) })
-    });
+    }, []);
 
     return (
         <div className="flexContainer menuItems">

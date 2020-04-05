@@ -5,7 +5,7 @@ import './header.css';
 
 function Header(){
     return (
-        <header>
+        <header className="globalHeader">
             <Link to={'/'} className="logo"><img src="https://www.stickpng.com/assets/images/58f37720a4fa116215a9240f.png" alt=""/></Link>
             <HomeComponent/>
         </header>
