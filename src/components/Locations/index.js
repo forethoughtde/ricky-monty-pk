@@ -19,7 +19,7 @@ const LocationsComponent = ()=>{
     }
 
     useEffect(()=>{
-        fetchLocations('https://rickandmortyapi.com/api/location')
+        fetchLocations()
             .then(data=>{
                 setLocations(data['results'])
             })

@@ -3,9 +3,10 @@ import fetchEposides from './../../api/eposides';
 import Accordion from 'react-bootstrap/Accordion'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
-import { Helmet } from 'react-helmet'
+import {Helmet} from 'react-helmet'
 
 const TITLE = 'Eposides - Ricky and Monty'
+
 
 const EposidesComponent = ()=>{
 
@@ -16,19 +17,19 @@ const EposidesComponent = ()=>{
     }
 
     const styleMarginBottom = {
-        width: '100%'
+        width : '100%'
     }
 
     useEffect(()=>{
-        fetchEposides('https://rickandmortyapi.com/api/episode').then(data=>{
-                setEposides(data['results'])
-            })
+        fetchEposides().then(data=>{
+            setEposides(data['results'])
+        })
     }, []);
 
     return (
         <div style={stylePadding}>
             <Helmet>
-                <title>{ TITLE }</title>
+                <title>{TITLE}</title>
             </Helmet>
             <h1>List of Eposides</h1>
             <div className="flexContainer">
