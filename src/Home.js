@@ -1,6 +1,6 @@
 import React from 'react';
 import HomeComponent from './components/HomeComponent'
-import { Helmet } from 'react-helmet'
+import {Helmet} from 'react-helmet'
 
 const TITLE = 'Overview'
 
@@ -8,15 +8,18 @@ function Home(){
     const style = {
         maxWidth : 1024,
         margin : '0 auto',
-        padding: 8
+        padding : 8
     }
     return (
         <div style={style}>
             <Helmet>
-                <title>{ TITLE }</title>
+                <title>{TITLE}</title>
             </Helmet>
             <h1>Rick and Morty</h1>
-            <img src="https://www.musikexpress.de/wp-content/uploads/2019/10/08/10/rick-morty-4-season-bildschirmfoto-2019-10-08-um-10-29-06.jpg" alt=""/>
+            <p>
+                <img src="https://www.musikexpress.de/wp-content/uploads/2019/10/08/10/rick-morty-4-season-bildschirmfoto-2019-10-08-um-10-29-06.jpg"
+                     alt=""/>
+            </p>
             <p>
                 Rick and Morty is an American adult animated science fiction sitcom created by Justin Roiland and Dan
                 Harmon for Cartoon Network's late-night programming block Adult Swim. The series follows the
