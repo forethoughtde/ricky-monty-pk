@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import fetchLocations from './../../api/locations';
 import Accordion from "react-bootstrap/Accordion";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
@@ -13,17 +14,12 @@ const LocationsComponent = ()=>{
         padding : 8
     }
 
-    const textAlignCenterStyle = {
-        textAlign : 'center'
-    }
-
     const styleMarginBottom = {
         width : '100%'
     }
 
     useEffect(()=>{
-        fetch('https://rickandmortyapi.com/api/location/')
-            .then((response)=>response.json())
+        fetchLocations('https://rickandmortyapi.com/api/location')
             .then(data=>{
                 setLocations(data['results'])
             })

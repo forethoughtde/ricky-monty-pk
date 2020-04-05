@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import fetchEposides from './../../api/eposides';
 import Accordion from 'react-bootstrap/Accordion'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
@@ -14,18 +15,12 @@ const EposidesComponent = ()=>{
         padding : 8
     }
 
-    const textAlignCenterStyle = {
-        textAlign : 'center'
-    }
-
     const styleMarginBottom = {
         width: '100%'
     }
 
     useEffect(()=>{
-        fetch('https://rickandmortyapi.com/api/episode/')
-            .then((response)=>response.json())
-            .then(data=>{
+        fetchEposides('https://rickandmortyapi.com/api/episode').then(data=>{
                 setEposides(data['results'])
             })
     }, []);

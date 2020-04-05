@@ -6,8 +6,8 @@ import {
     Route
 } from "react-router-dom";
 import './index.css';
-import Home from './Home';
 import Header from './Header';
+import Home from './Home';
 import Characters from './Characters';
 import Eposides from './Eposides';
 import Locations from './Locations';

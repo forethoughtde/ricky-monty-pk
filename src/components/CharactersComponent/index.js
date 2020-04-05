@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { Link } from 'react-router-dom'
+import fetchCharacters from './../../api/characters';
 import './style.css';
 import { Helmet } from 'react-helmet'
 
@@ -22,9 +22,7 @@ const HomeComponent = () => {
     }
 
     useEffect(() => {
-        fetch('https://rickandmortyapi.com/api/character/')
-            .then((response) => response.json())
-            .then(data => { setCharacters(data['results']) })
+        fetchCharacters('https://rickandmortyapi.com/api/character/').then(data => { setCharacters(data['results']) })
     }, []);
 
     return (
