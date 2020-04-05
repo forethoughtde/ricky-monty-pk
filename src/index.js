@@ -6,7 +6,6 @@ import {
     Route
 } from "react-router-dom";
 import './index.css';
-import App from './App';
 import Home from './Home';
 import Header from './Header';
 import Characters from './Characters';
@@ -18,7 +17,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 ReactDOM.render(
     <React.StrictMode>
         <Router>
-            <Header />
+            <Header/>
             <Switch>
                 <Route path="/locations">
                     <Locations/>

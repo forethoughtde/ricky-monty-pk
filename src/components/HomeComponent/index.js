@@ -16,10 +16,10 @@ const HomeComponent = () => {
         <div className="flexContainer menuItems">
             {
                 categories.map((category) => {
-                    return (<NavLink to={'/' + category} key={category} activeStyle={{
+                    return (<NavLink className="menu" to={'/' + category} key={category} activeStyle={{
                         fontWeight: "bold",
                         textDecoration: "underline"
-                    }} className="menu">{category}</NavLink>)
+                    }}>{category}</NavLink>)
                 })
             }
         </div>

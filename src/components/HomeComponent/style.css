@@ -39,3 +39,18 @@ img{
 	width: 100%;
 	max-width: 100%;
 }
+
+.menuItems{
+	display: flex;
+}
+
+.menu{
+	display: inline-flex;
+	margin-right: 32px;
+	font-size: 16px;
+	color: #FFFFFF;
+}
+
+.menu:last-child{
+	margin-right: 0;
+}

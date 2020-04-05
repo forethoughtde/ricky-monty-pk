@@ -41,19 +41,3 @@
     transform: rotate(360deg);
   }
 }
-
-.menuItems{
-	display: flex;
-}
-
-.menu{
-	display: inline-flex;
-	margin-right: 32px;
-	font-size: 16px;
-	color: #FFFFFF;
-}
-
-.menu:last-child{
-	margin-right: 0;
-}
-
