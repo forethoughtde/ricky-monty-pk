@@ -9,6 +9,9 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(252,252,252,1);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(252,252,252,1);
+	box-shadow: 10px 10px 5px 0px rgba(252,252,252,1);
 }
 
 @media screen and (min-width: 600px){
@@ -33,6 +36,10 @@
 	.character-item{
 		width: calc(100% / 6);
 	}
+}
+
+.character-detail:last-child{
+	margin-bottom: 0;
 }
 
 img{

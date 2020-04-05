@@ -10,7 +10,15 @@ const HomeComponent = () => {
     const [characters, setCharacters] = useState([]);
 
     const textAlignCenterStyle = {
-        textAlign: 'center'
+        textAlign: 'center',
+        marginBottom: 4,
+        fontSize: 14
+    }
+
+    const style = {
+        maxWidth : 1024,
+        margin : '0 auto',
+        padding : 8
     }
 
     useEffect(() => {
@@ -20,7 +28,7 @@ const HomeComponent = () => {
     }, []);
 
     return (
-        <div className="flexContainer">
+        <div className="flexContainer" style={style}>
             <Helmet>
                 <title>{ TITLE }</title>
             </Helmet>
@@ -28,10 +36,10 @@ const HomeComponent = () => {
                 characters.map((character) => {
                     return (<div className="character-item" key={character.id}>
                         <img src={character.image} alt=""/>
-                        <p style={textAlignCenterStyle}><strong>Name:</strong> {character.name}</p>
-                        <p style={textAlignCenterStyle}><strong>Status:</strong> {character.status}</p>
-                        <p style={textAlignCenterStyle}><strong>Species:</strong> {character.species}</p>
-                        <p style={textAlignCenterStyle}><strong>Gender:</strong> {character.gender}</p>
+                        <p style={textAlignCenterStyle} className="character-detail"><strong>Name:</strong> {character.name}</p>
+                        <p style={textAlignCenterStyle} className="character-detail"><strong>Status:</strong> {character.status}</p>
+                        <p style={textAlignCenterStyle} className="character-detail"><strong>Species:</strong> {character.species}</p>
+                        <p style={textAlignCenterStyle} className="character-detail"><strong>Gender:</strong> {character.gender}</p>
                     </div>)
                 })
             }
