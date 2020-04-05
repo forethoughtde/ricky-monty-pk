@@ -1,0 +1,23 @@
+header{
+	width: 100%;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 8px;
+
+	background-color: yellowgreen;
+}
+
+.logo{
+	max-width: 120px;
+}
+
+header a{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+a{
+	text-decoration: none;
+}
